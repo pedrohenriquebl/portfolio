@@ -1,8 +1,8 @@
-import { Controller, Get } from '@nestjs/common';
-import { Tecnologia } from '@core';
-import { TecnologiaPrisma } from './tecnologia.prisma';
+import { Controller, Get } from "@nestjs/common";
+import { Tecnologia } from "@core";
+import { TecnologiaPrisma } from "./tecnologia.prisma";
 
-@Controller('tecnologias')
+@Controller("tecnologias")
 export class TecnologiaController {
   constructor(private readonly repo: TecnologiaPrisma) {}
 
@@ -12,7 +12,7 @@ export class TecnologiaController {
     return fetchData;
   }
 
-  @Get('destaque')
+  @Get("destaques")
   async obterDestaque(): Promise<Tecnologia[]> {
     const fetchData = await this.repo.obterDestaque();
     return fetchData;
