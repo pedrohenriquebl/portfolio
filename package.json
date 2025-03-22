@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "cd frontend && npm run build",
     "dev": "npx concurrently \"cd backend && npm run start:dev\" \"cd frontend && npm run dev\""
   },
   "keywords": [],
